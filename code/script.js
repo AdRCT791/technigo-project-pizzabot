@@ -2,18 +2,18 @@
 
 // Step 1 - Welcome and introduction
 // Your code goes here
-// alert(
-//   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
-// );
-const name = prompt();
-alert(`Good Evening ${name}`);
-console.log(name);
+alert(
+  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+);
+const name = prompt('Hello! What is your name?', '');
+alert(`Hi and welcome ${name}!`);
 
 // Step 2 - Food choice
-// Your code goes here
+const choice = prompt(
+  `What would you like to order?\n(Enter a number)\n1-Pizza\n2-Pasta\n3-Salad`
+);
 
 // Step 3 - Subtype choice
-// Your code goes here
 
 // Step 4 - Age
 // Your code goes here
