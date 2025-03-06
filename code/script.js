@@ -14,7 +14,6 @@ let choice = prompt(
 );
 
 // Step 3 - Subtype choice
-
 if (Number(choice) === 1) {
   alert(`Pizza! Great choice`);
   choice = prompt(
@@ -23,12 +22,13 @@ if (Number(choice) === 1) {
 
   if (Number(choice) === 1) {
     choice = 'Margerita';
-    alert(`You have chosen a Pizza ${choice}`);
   } else if (Number(choice) === 2) {
-    alert(`You have chosen a Pizza ${choice}`);
+    choice = 'Capriciosa';
   } else if (Number(choice) === 3) {
-    alert(`You have chosen a Pizza ${choice}`);
+    choice = 'Pepperoni';
   }
+
+  alert(`You have chosen a Pizza ${choice}`);
 } else if (Number(choice) === 2) {
   alert(`Pasta! The best food is the world`);
   choice = prompt(
@@ -59,10 +59,26 @@ if (Number(choice) === 1) {
 }
 
 // Step 4 - Age
-
-const customerAge = prompt(
-  `is this food for an adult or a child? Please enter your age`
+let customerAge = prompt(
+  `is this food for an adult or a child? Please enter your age:`
 );
+
+if (Number(customerAge) > 12) {
+  customerAge = 'adult';
+} else {
+  customerAge = 'child';
+}
 
 // Step 5 - Order confirmation
 // Your code goes here
+alert(
+  `One ${customerAge} sized ${choice} will be prepared for you. That will be 80kr. Are you sure you want to order this?`
+);
+
+const confirmation = prompt('1-Yes\n2-No\n (Enter a Number)');
+
+if (Number(confirmation) === 1) {
+  alert(`Enjoy your ${choice} ${name}! See you next time!`);
+} else {
+  alert('You are welcome to place an order anytime');
+}
