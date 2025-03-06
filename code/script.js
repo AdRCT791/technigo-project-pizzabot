@@ -5,11 +5,11 @@
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 );
-const name = prompt('Hello! What is your name?', '');
+const name = prompt('Hello! What is your name?');
 alert(`Hi and welcome ${name}!`);
 
 // Step 2 - Food choice
-const choice = prompt(
+let choice = prompt(
   `What would you like to order?\n(Enter a number)\n1-Pizza\n2-Pasta\n3-Salad`
 );
 
@@ -17,45 +17,52 @@ const choice = prompt(
 
 if (Number(choice) === 1) {
   alert(`Pizza! Great choice`);
-  const pizzaChoice = prompt(
+  choice = prompt(
     `Select a Pizza: \n(Enter a number)\n1-Margerita\n2-Capriciosa\n3-Pepperoni`
   );
 
-  if (Number(pizzaChoice) === 1) {
-    alert('You have chosen a Pizza Margerita');
-  } else if (Number(pizzaChoice) === 2) {
-    alert('You have chosen a Pizza Capriciosa');
-  } else if (Number(pizzaChoice) === 3) {
-    alert('You have chosen a Pizza Pepperoni');
+  if (Number(choice) === 1) {
+    choice = 'Margerita';
+    alert(`You have chosen a Pizza ${choice}`);
+  } else if (Number(choice) === 2) {
+    alert(`You have chosen a Pizza ${choice}`);
+  } else if (Number(choice) === 3) {
+    alert(`You have chosen a Pizza ${choice}`);
   }
 } else if (Number(choice) === 2) {
   alert(`Pasta! The best food is the world`);
-  const pastaChoice = prompt(
+  choice = prompt(
     `Select a Pasta: \n(Enter a number)\n1-Carbonara\n2-Bolognese`
   );
 
-  if (Number(pastaChoice) === 1) {
-    alert('You have chosen Pasta Carbonara');
-  } else if (Number(pastaChoice) === 2) {
-    alert('You have chosen Pasta Bolognese');
+  if (Number(choice) === 1) {
+    choice = 'Pasta Carbonara';
+  } else if (Number(choice) === 2) {
+    choice = 'Pasta Bolognese';
   }
+
+  alert(`You have chosen ${choice}`);
 } else if (Number(choice) === 3) {
   alert(`Salad? Really? You eat what you want!`);
-  const saladChoice = prompt(
-    `Select a Salad: \n(Enter a number)\n1-Cesar\n2-Avocado\n`
+  choice = prompt(
+    `Select a Salad: \n(Enter a number)\n1-Salad Cesar\n2-Avocado Salad\n`
   );
 
-  if (Number(saladChoice) === 1) {
-    alert('You have chosen a Salad Cesar');
-  } else if (Number(saladChoice) === 2) {
-    alert('You have chosen an Avocado Salad');
+  if (Number(choice) === 1) {
+    choice = 'Salad Cesar';
+  } else if (Number(choice) === 2) {
+    choice = 'Avocado Salad';
   }
+  alert(`You have chosen ${choice}`);
 } else {
-  alert(`Please enter a valid choice. ${choice} is not on the menu.`);
+  alert(`Please enter a valid choice.`);
 }
 
 // Step 4 - Age
-// Your code goes here
+
+const customerAge = prompt(
+  `is this food for an adult or a child? Please enter your age`
+);
 
 // Step 5 - Order confirmation
 // Your code goes here
