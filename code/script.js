@@ -2,9 +2,12 @@
 
 // Step 1 - Welcome and introduction
 // Your code goes here
-alert(
-  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
-)
+// alert(
+//   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+// );
+const name = prompt();
+alert(`Good Evening ${name}`);
+console.log(name);
 
 // Step 2 - Food choice
 // Your code goes here
